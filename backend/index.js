@@ -16,4 +16,4 @@ app.set('views', path.join(__dirname, '../frontend/templates'))
 app.use(endpoints); // adding routes / endpoints
 app.use('/',express.static(path.join(__dirname, '../frontend/public')))
 
-app.listen(80);
+app.listen(process.env.PORT || 80);
