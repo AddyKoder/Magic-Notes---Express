@@ -1,6 +1,10 @@
 // Importing and connecting mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/notes')
+params = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+}
+mongoose.connect('mongodb+srv://androplayboy:mongodbcluster15!is!pass@cluster0.lfawf.mongodb.net/notes', params)
 
 // Importing the User Schema
 user = require('../schema/userSchema')
