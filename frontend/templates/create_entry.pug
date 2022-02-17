@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticating</title>
+</head>
+
+<body>
+    <div id="mail" style="display: none;">#{mail}</div>
+    <div id="pwd" style="display: none;">#{pwd}</div>
+</body>
+<script>
+    | var expires = (new Date(Date.now()+ 86400*1000*10)).toUTCString();
+    | document.cookie = `mail=${mail.innerHTML}; expires=${expires}`
+    | document.cookie = `pwd=${pwd.innerHTML}; expires=${expires}`
+    | location.href = '/dashboard'
+</script>
+</html>

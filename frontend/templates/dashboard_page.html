@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Notes</title>
+    <link rel="stylesheet" href="/dashboard_page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<script>
+
+cookies = document.cookie
+try{
+pairs = document.cookie.split('; ')
+for (i of pairs) {
+    pair = i.split('=')
+    if(pair[0] === 'mail') mail = pair[1]
+    else if(pair[0] === 'pwd') pwd = pair[1]
+}
+
+if (mail && pwd){
+
+    async function verify(){
+        let response = await fetch(`/verify?mail=${mail}&pwd=${pwd}`)
+        if (await response.text() === 'true'){
+            return true
+        }
+        throw new Error('no user found')
+    }
+    verify().catch(()=> location.href = '/')
+}}
+catch(e){
+    location.href = '/'
+}
+
+
+</script>
+
+<body>
+    <div id="main">
+        <div id="body">
+            
+            <header>
+                <div id="title">Magic Notes</div>
+                <div id="usermenu">
+                    <span id="user" style="padding-bottom: 4px;">
+                        User
+                    </span>
+                    <i onclick="sidebar.style.width = '25vw';" id="menu" class="material-icons" style="font-size: 23px;">menu</i>
+                </div>
+            </header>
+
+            <div id="content" onclick="sidebar.style.width = '0vw';">
+
+                <div id="top">
+                    <input type="text" id="searchbar" placeholder="Search Notes" spellcheck="false" oninput="
+    
+                        clearTimeout(out);
+                        out = setTimeout(function(){
+                            searchnotes()
+                            },150)" >
+                    <span id="notescount"><em>0 notes</em></span>
+                </div>
+                <hr>
+                <div id="notesarea">
+                    
+                    <div id="addnote" style="opacity:30%" onclick="addNote()">
+                        <i class="material-icons" style="font-size:140px">add</i>
+                    </div>
+                    
+                    
+
+                </div>
+
+            </div>
+
+            <div id="editor" onclick="sidebar.style.width = '0vw';">
+                <div id="top">
+                    <div id="editorheading">Edit Note</div>
+                    <div id="noteinfo">
+                        <div id="savenote">Save</div>
+                        <div id="cancelnote">Cancel</div>
+                    </div>
+                </div>
+                
+                <textarea name="notevalue" id="notevalue" spellcheck="false"></textarea>
+                
+            </div>
+
+        </div>
+
+        <div id="sidebar">
+            <div id="sidebarmain">
+                <div id="sidebartop"><span id="username">user</span><span id="usermail">demo@magicnotes.com</span></div>
+                <div id="buttons">
+                    <div id="phone">Phone: </div>
+                    <div id="logout" onclick="logout()">Log Out</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="/dashboard.js"></script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/login_signup.css">
+</head>
+<script src="/authenticate_user.js"></script>
+<body>
+    
+    <div id="header" style="color: rgb(0, 197, 0);">
+
+            <span id="title" onclick="location.href='/'">
+                Magic Notes
+            </span>
+            <span id="signuplogin">
+                Sign Up
+            </span> 
+            <span style="color:rgba(255, 255, 255, 0.26); font-size: 25px;font-weight: 100;" onclick="location.href='/login'">LogIn</span>
+
+    </div>
+
+    <div style="display: flex; justify-content: center;" id="main">
+        <form action="/signup" method="post" class = "main" spellcheck="false">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="text" name="phone" placeholder="Contact Number">
+            <input type="email" name="mail" placeholder="Email">
+            <input type="password" name="pwd" placeholder="Password">
+            <input type="password" name="cpwd" placeholder="Confirm Password">
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    
+    
+</body>
+
+</html>

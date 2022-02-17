@@ -1,0 +1,250 @@
+body{
+    background-color: #0d1117;
+    color: white;
+    
+}
+
+*{
+    margin:none;
+    transition: all 0.3s;
+    font-family: monospace;
+}
+
+#main{
+    margin: 45px 50px;
+}
+
+#body{
+    margin: auto;
+    width: 70vw;
+}
+
+#sidebar{
+    width: 0vw;
+    height: 100vh;
+    background-color: #010409;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+    box-shadow: 0px 0px 150px 10px rgba(0, 195, 255, 0.2);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    color: rgb(0, 132, 255);
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: 40px;
+}
+#usermenu{
+    font-size: 18px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+#user{
+    font-family: cursive;
+    color: rgba(255, 255, 255, 0.356);
+    margin: 0px 10px;
+}
+
+#content,#editor{
+    background-color: #010409;
+    margin: 20px 0px;
+    padding: 25px 60px;
+    border-radius: 10px;
+    min-height: 70vh;
+}
+#searchbar{
+    background-color: #26303d62;
+    border:none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    padding: 5px 15px;
+    transition: all 0s;
+}
+#searchbar:-webkit-autofill,
+#searchbar:-webkit-autofill:hover, 
+#searchbar:-webkit-autofill:focus
+{
+    transition: all 0s;
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 0px 1000px #10141d inset;
+  box-shadow: 0 0 0px 1000px #10141d inset ;
+}
+#searchbar:focus{
+    outline: none;
+}
+
+#top{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(117, 117, 117);
+}
+
+hr{
+   border-bottom: none; 
+   border-right: none;
+   border-left: none;
+   border-color: #ffffff3d;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.notescard,#addnote{
+    padding: 30px 20px;
+    background-color: #0d1117;
+    width: 150px;
+    height: 130px;
+    border-radius: 10px;
+    border : 4px solid transparent;
+    margin: 30px 10px;
+}
+.notestop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.notestitle{
+    font-size: 18px;
+}
+.notescontent{
+    font-size: 10px;
+    opacity: 50%;
+    height: 115px;
+
+}
+
+.notescontent:hover,#addnote:hover{
+    cursor: pointer;
+
+}
+#menu:hover{
+    cursor:pointer;
+    color:rgb(0, 132, 255);
+}
+.delnote:hover{
+    cursor:pointer;
+    color:red
+}
+#addnote>i:hover{
+
+}
+#notesarea{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#editorheading{
+    font-size: 25px;
+}
+
+#notevalue{
+    font-size: 18px;
+    background-color: transparent;
+    border:none;
+    border-left: 1px solid rgb(105, 105, 105);
+    color: rgb(177, 177, 177);
+    resize: none;
+    margin: 30px 0px;
+    padding: 10px 25px;
+    min-height: 55vh;
+    width: 60vw;
+    overflow: hidden;
+    overflow:auto;
+}
+
+#notevalue::-webkit-scrollbar,body::-webkit-scrollbar{
+    background-color: #0d1117;
+    border-radius: 7px;
+    width: 4px;
+}
+
+#notevalue::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{
+    background-color: #010409;
+    border:1px solid rgb(78, 78, 78);
+    border-radius:7px;
+    cursor: pointer;
+}
+
+
+
+#notevalue:focus{
+    outline:none;
+}
+
+#savenote,#cancelnote{
+    font-size: 13px;
+    font-weight: 800;
+    background-color: #0d1117;
+    padding: 5px 25px;
+    border-radius: 5px;
+    margin: 0px 5px;
+}
+
+#savenote:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgb(0, 255, 0);
+}
+#cancelnote:hover{
+    cursor: pointer;
+    color: black;
+    background-color: grey;
+}
+#noteinfo{
+    display: flex;
+    align-items: center;
+}
+#editor{
+    display:none;
+}
+
+#sidebartop{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#username{
+    font-size: 28px;
+}
+#usermail{
+    opacity: 60%;
+}
+#buttons{
+    color:grey
+}
+#logout{
+    width: 100%;
+    text-align: center; 
+    font-size: 17px;
+    margin-top: 35px;
+    background-color: #0d1117;
+    padding:7px 0px;
+}
+#logout:hover{
+    cursor: pointer;
+    color: white;
+}
+
+#sidebarmain{
+    margin: 50px 35px;
+}
