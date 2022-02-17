@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon backend/index.js",
     "start": "node backend/index.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run start"  
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run build"  
   },
   "author": "Aditya Tripathi",
   "license": "ISC",
