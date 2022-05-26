@@ -5,7 +5,7 @@ params = {
 	useUnifiedTopology: true,
 };
 mongoose.connect(
-	'mongodb+srv://androplayboy:mongodbcluster15!is!pass@cluster0.lfawf.mongodb.net/notes',
+	'mongodb+srv://androplayboy:<password>@cluster0.lfawf.mongodb.net/notes',
 	params
 );
 
